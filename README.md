@@ -14,7 +14,7 @@ add pitches and update their profiles.
 * Open the terminal and create a virtual environment using python3 -m venv virtual
 * Activate the virtual environment using source virtual/bin/activate
 * Install all the flask packages in 'requirements.txt' using pip install
-* Run ./start.sh on your terminal
+* Run python3 manage.py server on your terminal
 
 ## AUTHOR
 * Emmanuel Orega
