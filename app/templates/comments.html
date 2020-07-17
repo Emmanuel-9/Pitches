@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+
+{% block styles %}
+  {{super()}}
+  <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+  <div class="row comment-area">
+    <div class="col-md-4">
+        <div id="post-title">
+          <h2>{{post}}</h2>
+        </div>
+          {{ wtf.quick_form(comment_form) }}  
+      </div>
+      <div class="col-md-8" id="post-section">
+          <!-- {{format_comment|safe}} -->
+        {% for post in comments%}
+        
+        <div class="card peach-gradient color-block mb-3 mx-auto z-depth-1 post-card">
+          <h4 class="card-title">{{pitch.title}}</h4>
+          <p class="card-body">" ...{{post.comment}} "</p>
+          <p class="card-footer"><b>{{user.username}}</b>'s pitch</p>
+        </div>  
+        
+        {% endfor %}
+      </div>
+  </div>  
+</div>
+
+{% endblock %}
