@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+
+{% block styles %}
+  {{super()}}
+  <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
+{% endblock %}
+
+{% block content %}
+  <div class="container-fluid user-pitches">
+      
+        <div class="row">
+            <h2 id="p-cat" style="text-align: center"> PITCH CATEGORIES </h2>
+        </div> 
+        <div class="row main">
+        <div class="col-md-2"></div>     
+          <div class="col-md-8">             
+            <div class="row pitch-section">
+              <h3 class="cats">Personal Brand</h3>
+              {% for pitch in brand %}
+              <div class="card peach-gradient color-block mb-3 mx-auto z-depth-1">
+                <h4 class="card-title">{{pitch.title}}</h4>
+                <p class="card-body">" {{pitch.pitch}}</p>
+                <p class="card-footer"><a href="/comments/{{pitch.id}}"><button class="btn btn-light">Comment</button></a></p>
+              </div>  
+              {% endfor %}
+            </div>
+            <div class="row">
+              <h3 class="cats">Product</h3>                           
+              {% for pitch in product %}
+              <div class="card peach-gradient color-block mb-3 mx-auto z-depth-1">
+                <h4 class="card-title">{{pitch.title}}</h4>
+                <p class="card-body">" {{pitch.pitch}}</p>
+                <p class="card-footer"><a href="/comments/{{pitch.id}}"><button class="btn btn-light">Comment</button></a></p>
+              </div>              
+              {% endfor %}
+            </div>
+            <div class="row">
+              <h3 class="cats">Project</h3>
+              {% for pitch in project %}
+              <div class="card peach-gradient color-block mb-3 mx-auto z-depth-1">
+                <h4 class="card-title">{{pitch.title}}</h4>
+                <p class="card-body">" {{pitch.pitch}}</p>
+                <p class="card-footer"><a href="/comments/{{pitch.id}}"><button class="btn btn-light">Comment</button></a></p>
+              </div>  
+              {% endfor %}
+            </div>
+            <div class="row">
+              <h3 class="cats">Investor</h3>
+              {% for pitch in investor %}
+              <div class="card peach-gradient color-block mb-3 mx-auto z-depth-1">
+                <h4 class="card-title">{{pitch.title}}</h4>
+                <p class="card-body">" {{pitch.pitch}}</p>
+                <p class="card-footer"><a href="/comments/{{pitch.id}}"><button class="btn btn-light">Comment</button></a></p>
+              </div>  
+              {% endfor %}
+            </div>                              
+    
+          </div>
+          <div class="col-md-2"></div>
+        </div>  
+  </div>
+{% endblock %}
