@@ -1,0 +1,99 @@
+body{
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6em;
+    padding: 0;
+    margin: 0;
+  }
+  .header{
+    margin-top: 2%;
+    padding: 1rem;
+    margin-left: 14%;
+    margin-right: 10%;
+    border: solid #cd853f 2px;
+    height: 25rem;
+  }
+  .navbar-dark{
+    background-color: #cd853f;
+  }
+  #intro{
+    margin-top: 2%;
+    font-weight: bold;  
+    font-size: 2em;
+    margin-left: 30%;
+  }
+  #header{
+    text-align: center;
+  }
+  .form{
+    margin-top: 2%;
+  }
+  #pitch-title{
+    font-weight: bold;
+    font-size: 1em;
+    text-decoration: underline;
+  }
+  .cats{
+    text-align: center;
+    font-weight: bold;
+    clear: left;
+    color: white;
+  }
+  .card-title{
+    text-decoration: underline;
+    text-align: center;
+  }
+  .main{
+    padding: 1%;
+  }
+  ul li{
+    display: inline-block;
+    padding-left: 2px;
+  }
+  ul li a{
+    text-decoration: none;
+    color: black;
+    border-radius: 20px;
+    font-weight: bold;
+  }
+  .navbar-brand{
+    font-weight: bold;
+  }
+  #user{
+    text-decoration: none;
+    background-color: white;
+    border-radius: 20px;
+  }
+  #post-title{
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  #post-section{
+    border: 1px solid #cd853f;
+  }
+  .comment-area{
+    margin-top: 2%;
+  }
+  .post-card{
+    margin-top: 1%;
+  }
+  #p-cat{
+    margin-left: 30%;
+    margin-top: 1%;
+    border: 3px solid #cd853f;
+    padding: 2%;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.4)
+  }
+  #user{
+    background-color: black;
+    border-radius: 20px;
+    font-weight: bold;
+  }
+  .user-pitches{
+    background-image: url('../images/tell-them.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    
+  }
